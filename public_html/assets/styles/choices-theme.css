@@ -1,0 +1,16 @@
+.choices__inner {
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  min-height: 40px;
+  color: var(--text);
+}
+.choices__list--dropdown {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.choices__item--selectable.is-highlighted {
+  background: var(--accent-soft);
+}
