@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Serve static assets from public_html
+RewriteRule ^assets/(.*)$ public_html/assets/$1 [L]
+
+# Diagnostics
+RewriteRule ^__ping\.php$ public_html/__ping.php [L]
+RewriteRule ^__rewrite_test\.html$ public_html/__rewrite_test.html [L]
+
+# Front controller fallback
+RewriteRule ^ public_html/index.php [L]
