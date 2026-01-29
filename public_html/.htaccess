@@ -1,0 +1,26 @@
+# Easy. sklad routing
+RewriteEngine On
+
+# Force https if enabled in config.php
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{REQUEST_URI} !^/__ping\.php$
+RewriteCond %{REQUEST_URI} !^/__rewrite_test\.html$
+RewriteCond %{REQUEST_URI} !^/index\.php$
+RewriteCond %{REQUEST_URI} !^/assets/ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Diagnostic static files
+<Files "__ping.php">
+  Require all granted
+</Files>
+<Files "__rewrite_test.html">
+  Require all granted
+</Files>
+
+# Main rewrite
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
