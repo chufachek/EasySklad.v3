@@ -2,9 +2,9 @@
 return array(
     'db' => array(
         'host' => 'localhost',
-        'name' => 'easy_sklad',
-        'user' => 'root',
-        'pass' => '',
+        'name' => 'nikolxz1_3',
+        'user' => 'nikolxz1_3',
+        'pass' => 'Qwerty228;',
         'charset' => 'utf8mb4'
     ),
     'app' => array(
